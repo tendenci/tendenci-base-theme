@@ -1,4 +1,3 @@
-
 <!-- Tendenci Specific Load Tags (Delete as Needed)
 =========================================================== -->
 {% load i18n %}
@@ -19,13 +18,11 @@
 
 {% block meta_keywords %}{{ block.super }}, {{ SITE_GLOBAL_SITESECONDARYKEYWORDS }}{% endblock %}
 
-
 <!-- Start of the Body
 =========================================================== -->
 {% block body_ids %}sub{% endblock body_ids %}
 {% block body_classes %}sub{% endblock body_classes %}
 {% block html_body %}
-
 
 <!-- Header Starts
 =========================================================== -->
@@ -33,11 +30,7 @@
 <!-- Header Ends -->
 <div id="page-top">
   <div class="container">
-    
-    
-    
-    <!--  <div class="row"> -->
-    
+ 
     <div class="{% block content_classes %} col-xs-12 col-sm-8 col-md-8{% endblock %}">
       
       {% block content_messages %}
@@ -51,8 +44,7 @@
       </div>
       {% endblock %}
       
-    </div>
-    
+    </div> <!-- close content -->
     
     <div class="{% block sidebar_classes %}sidebar col-xs-12 col-sm-4 col-md-4{% endblock %}" id="sidebar">
       
@@ -60,17 +52,15 @@
         {% theme_include "sidebar.html" %}
         {% endblock %}
       
-    </div>  
+    </div>  <!-- close side-bar -->
     
-  </div> 
-  <!--   </div> -->
-  
-</div>
+  </div> <!-- close container -->
+</div> <!-- close page-top -->
 
 <footer class="{% block footer_classes %}col-xs-12 col-sm-12 col-md-12{% endblock %}">
   {% block footer %}
   {% spaceless %}{% theme_include "footer.html" %}{% endspaceless %}
   {% endblock %}
 </footer>
-{% endblock %}
 
+{% endblock %}
