@@ -52,10 +52,8 @@
   <div class="t-pages-page-body">
     {% blocktrans with c=page.content|safe %}{{ c }}{% endblocktrans %}
   </div>
-  
-  <div class="panel-footer">
-    {% include "pages/meta.html" %}
-  </div>
+
+  {% include "pages/meta.html" %}
   
 </article>
 {% endblock %}
