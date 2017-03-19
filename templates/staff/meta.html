@@ -2,12 +2,12 @@
 {% load base_filters %}
 {% load i18n %}
 
+{% if user.is_authenticated %}
 
 <nav class="navbar navbar-default t-meta-editor-bar">
   <div class="container-fluid">
     
     <ul class="list-unstyled">
-      {% if user.is_authenticated %}
       {% if not user.profile.is_superuser %}
       {% if user == staff.creator or user == staff.owner %}
       <div class="categories">
