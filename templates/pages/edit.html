@@ -48,7 +48,7 @@
             
             {% if page.status %}
             
-              <a class="btn btn-danger pull-right" class="delete" title="{% trans 'Link to delete confirmation page' %}" href="{% url "page.delete" page.pk %}">
+              <a class="btn btn-danger pull-right" title="{% trans 'Link to delete confirmation page' %}" href="{% url "page.delete" page.pk %}">
                 {% trans "Delete" %}
               </a>
             <br /><br />
