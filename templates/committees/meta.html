@@ -9,6 +9,7 @@
 {% has_perm user committees.delete_committee committee as can_delete %}
 {% tags_for_object committee as tags %}
 
+{% if user.is_authenticated %}
 <nav class="navbar navbar-default t-meta-editor-bar">
   <div class="container-fluid {% if not user.is_authenticated and not tags %}anon{% endif %}">
     
@@ -34,7 +35,6 @@
       </li>
       {% endif %}
       
-      {% if user.is_authenticated %}
       <div>
         Created {{ committee.create_dt|date:"long" }} by 
         <a href="{{ committee.creator.get_absolute_url }}">
