@@ -30,13 +30,14 @@
   </div>
   <!-- END: PANEL BODY -->
   
+  {% if user.profile.is_superuser %}
   <!-- START: META/FOOTER -->
   <nav class="navbar navbar-default">  
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-right">
-        {% if user.profile.is_superuser %}      <li><a>{{ photo_set.obj_perms }}</a></li>
+        <li><a>{{ photo_set.obj_perms }}</a></li>
         <li><a>{{ photo_set.obj_status }}</a></li>
-        {% endif %}
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Options <span class="caret"></span></a>
@@ -48,5 +49,6 @@
     </div>
   </nav>
   <!-- END: META/FOOTER -->
+  {% endif %}
   
 </div>
