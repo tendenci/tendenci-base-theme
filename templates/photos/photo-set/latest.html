@@ -15,24 +15,25 @@
 {% endblock %}
 
 {% block content %}
-<div class="col-md-12">
+  
   <div id="photo-sets-header-wrap">
     
     <div class="page-header">
       <h1>{{ MODULE_PHOTOS_LABEL }}</h1>
     </div>
     
-  </div>
+  </div><!-- photo-sets-header-wrap -->
   
   {% photo_set_search %}
   
   <span><em>{{ photo_sets|length }} {% trans 'Photo Sets' %} {% trans "Found" %}</em></span>
+  
   {% autopaginate photo_sets %}
   
   <br />
-  
+
+  <!-- photo-sets masonry -->
   {% if photo_sets %}
-  
   
   <div class="container-fluid">  
     <div class="grid">
@@ -47,20 +48,12 @@
       
       {% endfor %}
       
-      {% paginate %}
-      {% else %}
-      
     </div>
   </div>
   {% endif %}
-  
-</div>
+  <!-- end: photo-sets masonry -->
 
-{% endblock %}
-{% block extra_body %}
-{{ block.super }}
 <script type="text/javascript">
-  
   // photo: delete confirmation
   $('.photo-set .info .actions .delete-set').click(function(){
   var delete_photo = confirm('{% trans "Permenantly delete photo set?" %}'); // confirm
@@ -74,4 +67,5 @@
   percentPosition: true
   });
 </script>
+
 {% endblock %}
