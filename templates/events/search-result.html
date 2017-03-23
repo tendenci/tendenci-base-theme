@@ -1,0 +1,136 @@
+{% load perm_tags %}
+{% load event_tags %}
+{% load tagging_tags %}
+{% load base_filters %}
+{% load base_tags %}
+{% load category_tags %}
+{% load humanize %}
+{% load i18n %}
+{% load meta_tags %}
+
+<div class="panel panel-default" itemscope itemtype="http://schema.org/Event"> <!-- old class: event-wrap -->
+  
+  <div class="row">
+    <div class="panel-body">   
+      
+      <!-- IMAGE -->
+      {% if event.image %}
+      <div class="photo col-sm-3 col-xs-12">
+        <img class="img-responsive" itemprop="image" src="{% image_url event.image size=300x300 crop=True quality=88 %}" title="{{ event.title|truncatechars:123 }}" alt="{{ event.title|truncatechars:123 }}" />
+      </div>
+      {% endif %}
+      <!-- END: IMAGE -->
+      
+      
+      {% if event.image %}
+      <div class="col-sm-9 col-xs-12">
+        {% else %} 
+        <div class="col-sm-12 col-xs-12">
+          {% endif %}
+          <!-- the above section sizes event-info to full width when no image is available -->
+          
+          
+          <!-- DATE AND TIME -->
+          <div class="time-period">
+            {% if event.all_day %}
+            <span itemprop="startDate" datetime="{{ event.start_dt|date:'c' }}">{{ event.start_dt|date:"D, M j, Y" }}</span> 
+            <!-- END TIME - <span itemprop="endDate" datetime="{{ event.end_dt|date:'c' }}">{{ event.end_dt|date:"l, M j, Y" }}</span> -->
+            {% else %}
+            <span itemprop="startDate" datetime="{{ event.start_dt|date:'c' }}">{{ event.start_dt|date:"D, M j, Y P" }}</span> 
+            <!-- END TIME - <span itemprop="endDate" datetime="{{ event.end_dt|date:'c' }}">{{ event.end_dt|date:"l, M j, Y P" }}</span> -->
+            {% endif %}
+          </div>
+          <!-- END: DATE AND TIME -->
+          
+          
+          <!-- PANEL TITLE -->
+          <h4>
+            {% if event.priority %}
+            <div class="event-priority"></div>
+            {% endif %}
+            {% if event.is_recurring_event %}
+            <div class="event-recurring"></div>
+            {% endif %}
+            <a href="{% url "event" event.pk %}" itemprop="url"><span itemprop="name">{% blocktrans with title=event.title %}{{ title }}{% endblocktrans %}</span></a>
+          </h4>
+          <!-- END PANEL TITLE -->
+          
+          
+          <!-- LOCATION -->
+          {% if event.place %}
+          <div class="place" itemprop="location">{{ event.place }}</div>
+          {% endif %}
+          <!-- END: LOCATION -->
+          
+          <div class="description" itemprop="description">
+            {% blocktrans with desc=event.description|striptags|safe|truncatewords:40 %}{{ desc }}{% endblocktrans %}
+          </div>
+          
+          {% if event.groups.count > 0 %}
+          <div><strong>{% trans "Group(s):" %}</strong>
+            {% for group in event.groups.all %}
+            <a href="{% url 'group.detail' group.slug %}">{{ group.name }}</a>{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+          
+          {% with event.organizers as organizers %}
+          {% if organizers %}
+          <div><strong>{% trans "Organizer:" %}</strong>
+            {% for organizer in organizers %}
+            {{ organizer.name }}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+          {% endwith %}
+          
+          {% if event.registration_configuration.enabled %}
+          
+          {% if now > event.end_dt or now > event.registration_configuration.end_dt %}
+          
+          <div class="attend-wrap closed">
+            {% include "events/include/search-result-spots-taken.html" %}
+            <div class="attend"><a href="">{% trans "Registration Closed" %}</a></div>
+            <div style="clear:both;"></div>
+          </div>
+          
+          {% else %}
+          
+          {% is_registered_user user event as registered_user %}
+          {% if registered_user %}
+          <div class="attend-wrap registered">
+            {% include "events/include/search-result-spots-taken.html" %}
+            <div class="attend"><a href="{% url "event.myevents" %}">{% trans "You are registered" %}</a></div>
+            <div style="clear:both;"></div>
+          </div>
+          {% else %}
+          <div class="attend-wrap">
+            {% include "events/include/search-result-spots-taken.html" %}
+            <a class="btn btn-default pull-right" href="{% url "event" event.pk %}">{% trans "Attend this event" %}</a>
+            <div style="clear:both;"></div>
+          </div>
+          {% endif %}
+          
+          {% endif %}
+          
+          {% endif %}
+          
+        </div><!-- end: col-xs-9 -->
+        
+        
+      </div>
+      <!-- END: EVENT INFO -->
+      
+    </div> <!-- END: PANEL-BODY -->
+    
+    <div style="clear:both;"></div>
+    <div class="t-search-result-footer">
+      {% include 'events/meta.html' %}
+    </div>
+    <!-- delete-event form -->
+    <form name="event-delete" method="POST" action="{% url "event.delete" event.pk %}">{% csrf_token %}
+      <input type="hidden" name="action" value="delete">
+    </form>
+    
+  </div> <!-- end: event wrap / NOTE: not aligned because of image if statement -->
+  
