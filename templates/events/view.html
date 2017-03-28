@@ -25,6 +25,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- you are here: templates/events/view.html -->
 
 {% has_perm user events.change_event as can_edit %}
 
@@ -35,15 +36,18 @@
     <br />
     <div class="col-xs-12 well">
       
+      {% if event.image %}
       <div class="col-sm-5 col-xs-12">
-        {% if event.image %}
         <div class="photo">
           <img class="img-responsive" itemprop="image" src="{% image_url event.image %}" title="{{ event.title|truncatechars:123 }}" alt="{{ event.title|truncatechars:123 }}" />
         </div>
-        {% endif %}
       </div>
       
       <div class="col-sm-7 col-xs-12">
+        {% else %}
+        <div class="col-sm-12">
+          {% endif %}
+          
         <div class="time-period">
           <h3>
             {% for span in event.date_spans %}
@@ -58,7 +62,7 @@
           </h3>
         </div>
         <div class="page-header">
-          <h1>
+          <h2>
             {% if event.priority %}
             <div class="event-priority"></div>
             {% endif %}
@@ -66,7 +70,7 @@
             <div class="event-recurring"></div>
             {% endif %}
             <span itemprop="name">{% blocktrans with title=event.title %}{{ title }}{% endblocktrans %}</span>
-          </h1>
+          </h2>
         </div>
         <div class="col-xs-7">
           <p><strong>{{ event.place.name }}</strong><br />
@@ -75,7 +79,7 @@
             {{ event.place.country }}
           </p>
         </div>
-        <div class="col-xs-5 bottom-align-text">
+        <div class="col-xs-5">
           {% if event.registration_configuration.enabled %}
           {% registration_pricing_and_button event request.user %}
           {% endif %}
@@ -96,13 +100,14 @@
         </div>
         
         <br />
+        {% if speakers_length >= 1 %}
         <h4 class="time-period">Featured Speakers</h4>
         {% for speaker in speakers %}
         <div class="speaker-wrap panel panel-default">
           <div class="panel-body">
             {% if speaker.get_photo %}
             <div class="speaker-photo col-xs-3">
-              <img alt="Speaker: {{ speaker.name }}" title="Speaker: {{ speaker.name|truncatechars:114 }}" src="{% url "file" speaker.get_photo.pk %}"  width="100" />
+              <img class="img-responsive" alt="Speaker: {{ speaker.name }}" title="Speaker: {{ speaker.name|truncatechars:114 }}" src="{% url "file" speaker.get_photo.pk %}"  width="100" />
             </div>
             {% endif %}
             <div class="speaker">
@@ -130,6 +135,7 @@
         {% endfor %}
         {% if speakers_length > 1 %}
         <a class="btn btn-default" href="{% url "event.speakers" event.pk %}">{% trans "View all speakers" %}</a>
+        {% endif %}
         {% endif %}
         
         {% if organizer.name %}
