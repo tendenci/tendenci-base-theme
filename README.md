@@ -13,6 +13,8 @@ In the Bootswatch CDN link, you can change only the name of the them to toggle t
 
 ![Implementing Bootswatch for Tendenci](screenshots/bootswatch-theme-editor.png "Implementing Bootswatch for Tendenci.")
 
+#### Examples of Bootswatch Themes on Tendenci
+
 ![Example Bootswatch for Tendenci](screenshots/bootswatch-themes.png "Example Bootswatch for Tendenci.")
 
 
