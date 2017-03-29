@@ -6,6 +6,13 @@ Bootstrap Built-ins are used to create the foundation for most of the Tendenci m
 
 To add customizations on select pages, add your own unique class or id to prevent affecting the Bootstrap built-ins in other modules.
 
+### Implementing Bootswatch for Tendenci
+Navigate to "base.html" in your Theme Editor.
+
+In the Bootswatch CDN link, you can change only the name of the them to toggle through the different options!
+
+![Implementing Bootswatch for Tendenci](screenshots/bootswatch-theme-editor.png "Implementing Bootswatch for Tendenci.")
+
 ### Highly utilized Built-ins include:
 * Panels
 * Navs
