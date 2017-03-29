@@ -31,3 +31,7 @@ In the Bootswatch CDN link, you can change only the name of the them to toggle t
 This theme also uses the Masonry Plug-in in the Photos and Videos modules.  It can be easily applied anywhere else there are columned lists.
 
 ![An example of Masonry implemented in the Photos Module](screenshots/masonry-photos.png "An example of Masonry implemented in the Photos Module.")
+
+
+_For more tips and tricks, visit our Read the Docs!
+http://tendenci.readthedocs.io/en/latest/ _ 
