@@ -6,17 +6,21 @@ Bootstrap Built-ins are used to create the foundation for most of the Tendenci m
 
 To add customizations on select pages, add your own unique class or id to prevent affecting the Bootstrap built-ins in other modules.
 
+#### Examples of Bootswatch Themes on Tendenci
+
+![Example Bootswatch for Tendenci](screenshots/bootswatch-themes.png "Example Bootswatch for Tendenci.")
+
+## Masonry
+This theme also uses the Masonry Plug-in in the Photos and Videos modules.  It can be easily applied anywhere else there are columned lists.
+
+![An example of Masonry implemented in the Photos Module](screenshots/masonry-photos.png "An example of Masonry implemented in the Photos Module.")
+
 ### Implementing Bootswatch for Tendenci
 Navigate to "base.html" in your Theme Editor.
 
 In the Bootswatch CDN link, you can change only the name of the them to toggle through the different options!
 
 ![Implementing Bootswatch for Tendenci](screenshots/bootswatch-theme-editor.png "Implementing Bootswatch for Tendenci.")
-
-#### Examples of Bootswatch Themes on Tendenci
-
-![Example Bootswatch for Tendenci](screenshots/bootswatch-themes.png "Example Bootswatch for Tendenci.")
-
 
 ### Highly utilized Built-ins include:
 * Panels
@@ -27,11 +31,5 @@ In the Bootswatch CDN link, you can change only the name of the them to toggle t
 * Responsive Tables
 * Responsive Images
 
-## Masonry
-This theme also uses the Masonry Plug-in in the Photos and Videos modules.  It can be easily applied anywhere else there are columned lists.
-
-![An example of Masonry implemented in the Photos Module](screenshots/masonry-photos.png "An example of Masonry implemented in the Photos Module.")
-
-
 _For more tips and tricks, visit our Read the Docs!
-http://tendenci.readthedocs.io/en/latest/ _ 
+https://tendenci.readthedocs.io/en/latest/ _ 
