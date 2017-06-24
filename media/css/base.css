@@ -1,5 +1,25 @@
 /* GLOBAL CHANGES
 =========== */
+body {
+  background: #f9f9f9;
+}
+#page-top a:hover {
+  text-decoration: none;
+}
+#page-top-home h1, 
+#page-top-home h2,
+#page-top h1, 
+#page-top h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-transform: lowercase;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+p, li {
+  font-size: 16px;
+}
+.white-heading h1 {
+  color:white;
+}
 #id_captcha_1 {
   margin-left: 0;
 }
@@ -62,33 +82,10 @@ h3.panel-title {
 #page-top .panel:hover {
   box-shadow: 0 1px 10px rgba(0,0,0,0.3);
 }
-/* TENDENCI NAVBAR 
-=========== */
-.navbar-inverse {
-  box-shadow: 0px 2px 10px rgba(0,0,0,.25);
-}
-.navbar-inverse .navbar-nav>li>a {
-  padding: 5px 20px;
-}
-#t-admin-megamenu .navbar-brand {
-  height: 34px;
-}
-#t-admin-megamenu {
-  background-color: #333333;
-}
-/* SCROLLABLE */
-#t-admin-megamenu .navbar-nav>li>.dropdown-menu {
-  height: auto;
-  max-height: 400px;
-  overflow-x: hidden;
-  min-width: 400px;
-}
-#t-admin-megamenu li.content-item {
-  white-space: nowrap;
-  padding: 2px;
-}
-#t-admin-megamenu .nav-icon {
-  margin-right: 8px;
+.navbar-nav .navbar-nav>li>a {
+  padding: 20px 20px;
+  font-size: 14px;
+  color: #F2F2F2;
 }
 
 /* NAVBAR
@@ -170,6 +167,66 @@ section#follow-us,
 footer {
   padding: 40px 0 40px;
 }
+#event-results .panel-heading {
+  padding: 0;
+  height: 180px;
+  overflow: hidden;
+  border-top-right-radius: 0;
+}
+#event-results .panel-body {
+  padding-bottom: 0;
+  overflow: hidden;
+  height: 180px;
+}
+#event-results .panel-footer {
+  padding: 0;
+  background: white;
+  border-top: 1px solid #eee;
+}
+#event-results .fa.fa-plus,
+#event-results .fa.fa-calendar {
+  border-left: 1px solid #eee;
+  padding: 15px;
+}
+#event-results .fa.fa-plus.active,
+#event-results .fa.fa-calendar {
+  background: #eee;
+  font-family: FontAwesome, 'Roboto', sans-serif;
+}
+#event-results .fa.fa-plus:hover {
+  background: #ccc;
+}
+.my-banner-events.text-center{
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+}
+.my-banner-events .list-inline {
+  margin-top: 30px;
+}
+.my-banner-events li>a:hover {
+  text-decoration: none;
+  border-bottom: 5px solid #0a6ebd;
+  padding-bottom: 12px;
+}
+.my-banner-events .list-inline>li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.my-banner-events a:hover {
+  text-decoration: none;
+}
+select#id_event_type {
+  height: 36px;
+}
+#page-top iframe#id_organizer-description_ifr,
+#page-top iframe#id_place-description_ifr,
+#page-top iframe#id_description_ifr,
+iframe#speaker-0-description_ifr {
+    height: 100px !important;
+}
+
+
+
 /* EVENTS CALENDAR INTERNAL PAGES
 ========== */
 .month-view div.weekday {
@@ -216,14 +273,12 @@ footer {
 }
 .time-period {
   text-transform: uppercase;
+  font-weight: bold;
 }
 #page-top .t form.search-form input[type="text"].datepicker {
   width: auto;
 }
 /* EVENTS VIEW */
-#events-view .photo img {
-  margin-top: 5%;
-}
 #events-view .location-registration .col-xs-6 {
   margin: 0;
   padding: 0;
@@ -233,6 +288,16 @@ footer {
 }
 #events-view .info {
   padding-right: 70px;
+}
+#events-view {
+  background: white;
+  padding: 0 20px;
+  border-radius: 3px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+}
+#event-location-header {
+  padding-left:0;
 }
 
 /* FOOTER
@@ -297,6 +362,16 @@ INTERNAL PAGES
 #page-top .green-header h1 {
   color: white;
 }
+/* ABOUT 
+============= */
+#about-pages h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-transform: lowercase;
+  text-shadow: 1px 1px #585858;
+}
+#about-pages .green-header h1 {
+  color:white;
+}
 /* MASONRY PHOTOS 
 ================= */
 .grid-item {
@@ -333,4 +408,31 @@ INTERNAL PAGES
 .grid-item .thumbnail {
   padding: 0;
   margin-bottom: 5px;
+}
+
+/* mapbox
+========== */
+div#map {
+    height: 180px;
+}
+
+/* DIRECTORIES 
+=============== */
+
+.panel-heading.t-search-result-heading.directories-heading {
+  height: 180px;
+  overflow: hidden;
+}
+.panel-body.t-search-result-body.directories-body {
+  height: 280px;
+  overflow: hidden;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* MEMBERSHIPS
+=============== */
+.t .membership-detail-wrap fieldset {
+  background-color: transparent;
 }
