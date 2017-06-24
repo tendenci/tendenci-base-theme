@@ -19,7 +19,7 @@
       
     </div>
     
-    <div class="panel-body t-search-result-body">
+    <div class="panel-body t-search-result-body directories-body">
 
       <h4><a href="{{ directory.get_absolute_url }}">
         {% firstof directory.headline trans "Untitled" %}</a></h4>
@@ -71,4 +71,3 @@
 </div>
 {% if forloop.counter|divisibleby:4 %}</div><div class="row">{% endif %}
   {% if forloop.last %}</div>{% endif %}
-
