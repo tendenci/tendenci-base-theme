@@ -25,8 +25,10 @@
     
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
     <link rel="search" type="application/opensearchdescription+xml" title="{{ SITE_GLOBAL_SITEDISPLAYNAME }}" href="{{ SITE_GLOBAL_SITEURL }}{% url 'open_search' %}">
-    <script src="{{ THEME_URL }}media/js/masonry.pkgd.min.js"></script>
     
+    {% block jquery_script %}
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    {% endblock jquery_script %}
     
     {% block includebootstrap3css %}
     {# Let's try using Bootstrap 3 in all sites #}
@@ -72,6 +74,7 @@
     <link rel="stylesheet" href="{{ THEME_URL }}media/css/animate.min.css" type="text/css">
     <link rel="stylesheet" href="{{ THEME_URL }}media/css/custom.css" type="text/css">
     <link rel="stylesheet" href="{{ THEME_URL }}media/css/admin.css" type="text/css">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" type="text/css">
     
     <!-- FAVICONS -->
@@ -91,9 +94,9 @@
     
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ THEME_URL }}media/font-awesome/css/font-awesome.css" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300,400,700|Montserrat|Montserrat+Alternates:400,500" rel="stylesheet">    </head>
+  
   
   <body id="{% block body_ids %}{% endblock %}" class="{% if request.user.is_superuser %}t-auth-admin-loggedin {% endif %}{% block body_classes %}{% endblock %}">
     {% block top_bar %}
@@ -134,9 +137,7 @@
     
     {% if request.user.is_superuser %}{# include "admin_menu/admin_bottom.html" #}{% endif %}
     
-    {% block jquery_script %}
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    {% endblock jquery_script %}
+
     
     <script type="text/javascript">
       jQuery(document).ready(function () {
@@ -165,6 +166,8 @@
     <script type="text/javascript" src="{% static 'js/jquery_plugins/spectrum.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/theme_color_admin.js' %}"></script>
     {% endif %}
+    
+    <script src="{{ THEME_URL }}media/js/masonry.pkgd.min.js"></script>
     
     {% if THEME_INFO.SSU.walkthrough %}
     <script type="text/javascript">
