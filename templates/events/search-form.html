@@ -1,57 +1,14 @@
 {% load i18n %}
+
 <form class="form-inline" action="{% if past %}{% url "event.past_search" %}{% else %}{% url "event.search" %}{% endif %}" method="get">
-  
-  
-  <div class="form-group">
-    <div class="id_start_dt">
-      <div>
-        <label for="start_dt">{% trans 'Start Date' %}</label>
-      </div>
-      <div class="field">
-        {{ form.start_dt }}
-      </div>
-    </div>
-  </div>
   
   <div id="event_types_container" class="form-group">
     <div class="id_event_types">
-      <div>
-        <label for="event_type">{% trans 'Event Type' %}</label>
-      </div>
-      <div class="field">
-        {{ form.event_type }}
-      </div>
+        {{ form.event_type }}      
     </div>
   </div>
   
-  <div id="event_groups_container" class="form-group">
-    <div class="id_event_groups">
-      <div>
-        <label for="event_group">{% trans 'Event Group' %}</label>
-      </div>
-      <div class="field">
-        {{ form.event_group }}
-      </div>
-    </div>
-  </div>
-  
-  {% if form.registration %}
-  <div class="form-group">
-    <div class="id_registration">
-      <div class="field">
-        {{ form.registration }} 
-        <label for="id_registration">{% trans "Events I Have Registered For" %}</label>
-      </div>
-    </div>
-  </div>
-  {% endif %}
-  <div class="clear"></div>
-  
-  <div>{{ form.q.errors }}</div>
-  
-  {{ form.search_category }}
-  
-  <div class="input-group add-on">      
+  <div class="input-group add-on form-group">      
     <input class="form-control" type="text" name="q" value="{{ request.GET.q|striptags }}" placeholder="Search" />
     <div class="input-group-btn">
       <button class="btn btn-default" type="submit">
@@ -59,5 +16,9 @@
       </button>
     </div>
   </div>
+  
+  {% if form.q.errors %}
+  <div>{{ form.q.errors }}</div>
+  {% endif %}
   
 </form>
