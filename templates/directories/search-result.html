@@ -9,7 +9,7 @@
 {% if forloop.first %}<div class="row">{% endif %}
 <div class="col-sm-3">
   <article class="panel panel-default t-directories-search-result t-search-result">
-    <div class="panel-heading t-search-result-heading">
+    <div class="panel-heading t-search-result-heading directories-heading">
       
       {% if directory.logo %}
       <p class="t-directories-directory-image-container text-center">
@@ -25,7 +25,7 @@
         {% firstof directory.headline trans "Untitled" %}</a></h4>
       
       
-      <!-- category -->
+      <!-- category OR "LEVEL" -->
       {% with directory.category_set as directory_cat %}
       
       <ul class="list-unstyled capitalize">
@@ -50,8 +50,10 @@
       {% endwith %}
       
       
-      <!-- tags  -->
+      <!-- tags OR "SPECIALTY" -->
 
+      
+      
       <p class="item-content">
         {% if directory.summary %}
         {% blocktrans with summary=directory.summary|striptags|truncatewords:15|safe %}{{ summary }}{% endblocktrans %}
@@ -60,8 +62,6 @@
         {% endif %}
       </p>
     </div>
-    
-    <!-- META IS HIDDEN IN THIS DESIGN -->
     
     <!-- <div class="panel-footer t-search-result-footer">
       {# include "directories/meta.html" #}
