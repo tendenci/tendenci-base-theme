@@ -1,28 +1,29 @@
 # tendenci-base-theme
-One base starter theme for a Tendenci site. This repo will replace the older "tendenci-project-template" repo.
+One base starter theme for a Tendenci site. This repo will replace the older "tendenci-project-template" repo.  This theme is a fully responsive, completely customizable Bootstrap theme for Tendenci.
+
+## Getting Started
+
+If your running Tendenci on your own local machine, feel free to clone or fork the repo. To make changes from Tendenci's browser-based Theme Editor, you can copy and paste templates. Please note that css changes currently on your site may affect the css in this template.
 
 ## Using Bootstrap 3
-Bootstrap Built-ins are used to create the foundation for most of the Tendenci modules in the theme.  Change the Bootswatch CDN in the base.html file to test completely different looks quickly while developing your new site.
+[Bootstrap](https://getbootstrap.com/) Built-ins are used to create the foundation for most of the Tendenci modules in the theme.  Using Bootstrap 3 makes it possible to implement site-wide design changes instantly.  The Bootswatch CDN is used in this theme and can be removed to reveal simple Bootstrap classic templates.  Other themes from [Bootswatch](https://bootswatch.com/) can also be used by changing the Bootswatch CDN in the 'base.html' file.
 
 To add customizations on select pages, add your own unique class or id to prevent affecting the Bootstrap built-ins in other modules.
 
-#### Examples of Bootswatch Themes on Tendenci
+### Examples of [Bootswatch](https://bootswatch.com/) Themes on Tendenci
 
-![Example Bootswatch for Tendenci](screenshots/bootswatch-themes.png "Example Bootswatch for Tendenci." width="200")
-
-## Masonry
-This theme also uses the Masonry Plug-in in the Photos and Videos modules.  It can be easily applied anywhere else there are columned lists.
-
-![An example of Masonry implemented in the Photos Module](screenshots/masonry-photos.png "An example of Masonry implemented in the Photos Module.")
+![Example Bootswatch for Tendenci](screenshots/bootswatch-themes.png "Example Bootswatch for Tendenci.")
 
 ### Implementing Bootswatch for Tendenci
 Navigate to "base.html" in your Theme Editor.
 
-In the Bootswatch CDN link, you can change only the name of the them to toggle through the different options!
+In the Bootswatch CDN link, you can change only the name of the theme to toggle through the different options!  See the image below for directions.  In this example, the 'paper' theme is used.  You can change this to any of the other [Bootswatch](https://bootswatch.com/) theme names to completely change the look of your site. 
 
 ![Implementing Bootswatch for Tendenci](screenshots/bootswatch-theme-editor.png "Implementing Bootswatch for Tendenci.")
 
 ### Highly utilized Built-ins include:
+When updating the css in your site be mindful that these classes are implemented frequently in this base-theme.  Changes to the classes associated will be site-wide!
+
 * Panels
 * Navs
 * Wells
@@ -31,5 +32,42 @@ In the Bootswatch CDN link, you can change only the name of the them to toggle t
 * Responsive Tables
 * Responsive Images
 
-_For more tips and tricks, visit our Read the Docs!
-https://tendenci.readthedocs.io/en/latest/ _ 
+## Features
+### Masonry
+This theme also uses Masonry in the Photos and Videos modules.  It can be easily applied anywhere else there are variable sized grids.
+
+![An example of Masonry implemented in the Photos Module](screenshots/masonry-photos.png "An example of Masonry implemented in the Photos Module.")
+
+## Fonts
+The fonts in this theme are:
+* 'Frank Ruhl Libre', serif
+* 'Montserrat Alternates', sans-serif
+* 'Montserrat', sans-serif
+
+They are integrated into base.html using Google Fonts CDN.  If you'd like to host the fonts yourself, you can by downloading them at [Google Fonts](https://fonts.google.com).
+
+## Icons
+Icon sets in this theme are:
+* 'Font Awesome'
+* 'Material Design'
+
+## Creator
+This template was created by [Tendenci](https://tendenci.com)!
+
+* [Twitter](https://twitter.com/tendenci)
+* [Facebook](https://facebook.com/tendenci)
+* [YouTube](https://youtube.com/tendencicms)
+* [Github](https://github.com/tendenci)
+
+## Bugs and Issues
+Having an issue with this template?  Please submit here on [Tendenci's Github](https://github.com/tendenci/tendenci/issues).
+
+## Copyright and License
+Copyright Tendenci — The Open Source AMS, 2017 under the GPU license.
+
+Images are from [Pexels](https://pexels.com) under CC0.
+Fonts are from [Google Fonts](https//fonts.google.com).
+
+
+*For more tips and tricks, visit our Read the Docs!
+https://tendenci.readthedocs.io/en/latest/*
