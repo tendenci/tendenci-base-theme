@@ -72,25 +72,17 @@
     <!-- Custom styles for this template
     =========================================================== -->
     <link rel="stylesheet" href="{{ THEME_URL }}media/css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ THEME_URL }}media/css/custom.css" type="text/css">
+    <link rel="stylesheet" href="{{ THEME_URL }}media/css/base.css" type="text/css">
     <link rel="stylesheet" href="{{ THEME_URL }}media/css/admin.css" type="text/css">
     
+    
+    <!-- To change Bootswatch Theme, use this link  
+    ============================================================================ -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" type="text/css">
     
-    <!-- FAVICONS -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ THEME_URL }}media/img/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ THEME_URL }}media/img/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ THEME_URL }}media/img/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ THEME_URL }}media/img/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ THEME_URL }}media/img/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ THEME_URL }}media/img/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ THEME_URL }}media/img/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ THEME_URL }}media/img/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ THEME_URL }}media/img/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ THEME_URL }}media/img/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ THEME_URL }}media/img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ THEME_URL }}media/img/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ THEME_URL }}media/img/icons/favicon-16x16.png">      
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ THEME_URL }}media/img/willowfavicon.png">      
     
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ THEME_URL }}media/font-awesome/css/font-awesome.css" type="text/css">
@@ -166,8 +158,6 @@
     <script type="text/javascript" src="{% static 'js/jquery_plugins/spectrum.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/theme_color_admin.js' %}"></script>
     {% endif %}
-    
-    <script src="{{ THEME_URL }}media/js/masonry.pkgd.min.js"></script>
     
     {% if THEME_INFO.SSU.walkthrough %}
     <script type="text/javascript">
