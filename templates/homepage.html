@@ -266,11 +266,6 @@
     </div>
   </section>
   <!-- end: home-fifth-content-row -->
-
-  <!-- locate: Leaflet -->
-  <div id="mapid" style="height:200px;"></div>
-  <!-- end locate: Leaflet -->
-  
   
    <!-- Footer starts
       =========================================================== -->
@@ -285,17 +280,6 @@
 <!-- Bootstrap core JavaScript
    ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
-<!-- Plugins -->
-<!-- jQuery -->
-<script src="{{ THEME_URL }}media/js/jquery.easing.min.js"></script>
-<script src="{{ THEME_URL }}media/js/jquery.fittext.js"></script>
-<script src="{{ THEME_URL }}media/js/wow.min.js"></script> 
-<!-- Custom Theme JavaScript -->
-<!-- <script src="{{ THEME_URL }}media/js/creative.js"></script> -->
 <script>
    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
    p=/^http:/.test(d.location)?'http':'https';
@@ -312,21 +296,5 @@
      $('#rotator_inner > .item:last').remove();
      });
 </script>
-
-<!-- leaflet -->
-<script>
-  var mymap = L.map('mapid').setView([37.778, -122.440], 13);
-  var marker = L.marker([37.78121, -122.4103236]).addTo(mymap);
-  
-  L.tileLayer('https://api.mapbox.com/styles/v1/leanneluce/cj1ccorye003x2so0o1jhc6h8/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGVhbm5lbHVjZSIsImEiOiJjajFjY2Y0ZzQwMDBjMzJvN21ybnY4MWFiIn0.iQlWmwmuEvjplmztBqEs5g', {    
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-  maxZoom: 13,
-  minZoom: 13,
-  id: 'mapid',
-  accessToken: 'pk.eyJ1IjoibGVhbm5lbHVjZSIsImEiOiJjajFjY2Y0ZzQwMDBjMzJvN21ybnY4MWFiIn0.iQlWmwmuEvjplmztBqEs5g'
-  }).addTo(mymap);
-  marker.bindPopup("<b>Our Offices!</b><br>Visit us at COVO.<br>981 Mission Street<br>San Francisco, CA 94103");  
-</script>
-<!-- END: leaflet -->
 
 {% endblock extra_body %}
