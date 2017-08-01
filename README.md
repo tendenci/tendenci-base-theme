@@ -1,6 +1,8 @@
 # Tendenci Base Theme
 One base starter theme for a Tendenci site. This repo will replace the older "tendenci-project-template" repo.  This theme is a fully responsive, completely customizable Bootstrap theme for Tendenci.
 
+<img src="screenshots/willowbanner-2.jpg" alt="Willow Responsive Web Design Images for Tendenci Screenshots Tendenci" />
+
 ## Getting Started
 
 If your running Tendenci on your own local machine, feel free to clone or fork the repo. To make changes from Tendenci's browser-based Theme Editor, you can copy and paste templates. Please note that css changes currently on your site may affect the css in this template.
@@ -35,7 +37,7 @@ When updating the css in your site be mindful that these classes are implemented
 ### Masonry
 This theme also uses Masonry in the Photos and Videos modules.  It can be easily applied anywhere else there are variable sized grids.
 
-<img src="screenshots/masonry-photos.png" width="400" alt="An example of Masonry implemented in the Photos Module Screenshots Tendenci" />
+<img src="screenshots/masonry-photos.png" width="400" alt="An example of Masonry implemented in the Photos Module Screenshots Tendenci" /><img src="screenshots/willow_video.jpg" width="600" alt="An example of Masonry implemented in the Videos Module Screenshots Tendenci" />
 
 ## Fonts
 The fonts in this theme are:
