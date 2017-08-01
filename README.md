@@ -37,7 +37,7 @@ When updating the css in your site be mindful that these classes are implemented
 ### Masonry
 This theme also uses Masonry in the Photos and Videos modules.  It can be easily applied anywhere else there are variable sized grids.
 
-<img src="screenshots/masonry-photos.png" width="400" alt="An example of Masonry implemented in the Photos Module Screenshots Tendenci" /><img src="screenshots/willow_video.jpg" width="400" alt="An example of Masonry implemented in the Videos Module Screenshots Tendenci" />
+<img src="screenshots/willow_video.jpg" width="450" alt="An example of Masonry implemented in the Videos Module Screenshots Tendenci" /><img src="screenshots/masonry-photos.png" width="400" alt="An example of Masonry implemented in the Photos Module Screenshots Tendenci" />
 
 ## Fonts
 The fonts in this theme are:
