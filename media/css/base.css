@@ -248,6 +248,9 @@ img.captcha {
 .modal-backdrop.in {
   z-index: 0;
 }
+.form-builder-wrap input.btn.btn-lg.btn-primary {
+  margin-top: 15px;
+}
 
 /* THUMBNAIL CARDS
 =========== */
