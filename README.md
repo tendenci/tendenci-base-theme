@@ -1,4 +1,4 @@
-# tendenci-base-theme
+# Tendenci Base Theme
 One base starter theme for a Tendenci site. This repo will replace the older "tendenci-project-template" repo.  This theme is a fully responsive, completely customizable Bootstrap theme for Tendenci.
 
 ## Getting Started
@@ -23,7 +23,6 @@ In the Bootswatch CDN link, you can change only the name of the theme to toggle 
 
 ### Highly utilized Built-ins include:
 When updating the css in your site be mindful that these classes are implemented frequently in this base-theme.  Changes to the classes associated will be site-wide!
-
 * Panels
 * Navs
 * Wells
@@ -38,6 +37,8 @@ This theme also uses Masonry in the Photos and Videos modules.  It can be easily
 
 ![An example of Masonry implemented in the Photos Module](screenshots/masonry-photos.png "An example of Masonry implemented in the Photos Module.")
 
+<img src="screenshots/masonry-photos.png" width="200" />
+
 ## Fonts
 The fonts in this theme are:
 * 'Frank Ruhl Libre', serif
@@ -48,12 +49,11 @@ They are integrated into base.html using Google Fonts CDN.  If you'd like to hos
 
 ## Icons
 Icon sets in this theme are:
-* 'Font Awesome'
-* 'Material Design'
+* [Font Awesome](http://fontawesome.io/)
+* [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font/icons.html)
 
 ## Creator
 This template was created by [Tendenci](https://tendenci.com)!
-
 * [Twitter](https://twitter.com/tendenci)
 * [Facebook](https://facebook.com/tendenci)
 * [YouTube](https://youtube.com/tendencicms)
@@ -67,7 +67,6 @@ Copyright Tendenci — The Open Source AMS, 2017 under the GPU license.
 
 Images are from [Pexels](https://pexels.com) under CC0.
 Fonts are from [Google Fonts](https//fonts.google.com).
-
 
 *For more tips and tricks, visit our Read the Docs!
 https://tendenci.readthedocs.io/en/latest/*
