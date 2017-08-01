@@ -12,14 +12,14 @@ To add customizations on select pages, add your own unique class or id to preven
 
 ### Examples of [Bootswatch](https://bootswatch.com/) Themes on Tendenci
 
-![Example Bootswatch for Tendenci](screenshots/bootswatch-themes.png "Example Bootswatch for Tendenci.")
+<img src="screenshots/bootswatch-themes.png" width="600" alt="Screenshots Bootswatch for Tendenci Screenshots Tendenci" />
 
 ### Implementing Bootswatch for Tendenci
 Navigate to "base.html" in your Theme Editor.
 
 In the Bootswatch CDN link, you can change only the name of the theme to toggle through the different options!  See the image below for directions.  In this example, the 'paper' theme is used.  You can change this to any of the other [Bootswatch](https://bootswatch.com/) theme names to completely change the look of your site. 
 
-![Implementing Bootswatch for Tendenci](screenshots/bootswatch-theme-editor.png "Implementing Bootswatch for Tendenci.")
+<img src="screenshots/bootswatch-theme-editor.png" width="600" alt="Implementing Bootswatch for Tendenci Screenshots Tendenci" />
 
 ### Highly utilized Built-ins include:
 When updating the css in your site be mindful that these classes are implemented frequently in this base-theme.  Changes to the classes associated will be site-wide!
@@ -35,9 +35,7 @@ When updating the css in your site be mindful that these classes are implemented
 ### Masonry
 This theme also uses Masonry in the Photos and Videos modules.  It can be easily applied anywhere else there are variable sized grids.
 
-![An example of Masonry implemented in the Photos Module](screenshots/masonry-photos.png "An example of Masonry implemented in the Photos Module.")
-
-<img src="screenshots/masonry-photos.png" width="200" />
+<img src="screenshots/masonry-photos.png" width="400" alt="An example of Masonry implemented in the Photos Module Screenshots Tendenci" />
 
 ## Fonts
 The fonts in this theme are:
