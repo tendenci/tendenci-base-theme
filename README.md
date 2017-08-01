@@ -8,7 +8,7 @@ To add customizations on select pages, add your own unique class or id to preven
 
 #### Examples of Bootswatch Themes on Tendenci
 
-![Example Bootswatch for Tendenci](screenshots/bootswatch-themes.png "Example Bootswatch for Tendenci.")
+![Example Bootswatch for Tendenci](screenshots/bootswatch-themes.png "Example Bootswatch for Tendenci." width="200")
 
 ## Masonry
 This theme also uses the Masonry Plug-in in the Photos and Videos modules.  It can be easily applied anywhere else there are columned lists.
