@@ -94,6 +94,9 @@ h3.panel-title {
   margin: 0 !important;
   padding: 0 !important;
 } 
+#box-1 {
+  margin-top: 10px;
+}
 .navbar {
   margin-bottom: 0 !important;
 }
