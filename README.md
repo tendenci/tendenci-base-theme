@@ -57,7 +57,7 @@ Having an issue with this template?  Please submit here on [Tendenci's Base Them
 ## Copyright and License
 Copyright Tendenci — The Open Source AMS, 2017 under the GPU license.
 
-Images are from [Pexels](https://pexels.com) under CC0.
+Images are from [Pexels](https://pexels.com) or by [Ed Schipul](https://www.tendenci.com/photos/set/latest/?q=stock) under CC0.
 
 *For more tips and tricks, visit our Read the Docs!
 https://tendenci.readthedocs.io/en/latest/*
