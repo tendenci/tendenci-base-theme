@@ -1,7 +1,7 @@
 # Tendenci Base Theme
 One base starter theme for a Tendenci site. This repo will replace the older "tendenci-project-template" repo.  This theme is a fully responsive, completely customizable Bootstrap theme for Tendenci.
 
-<img src="screenshots/willowbanner-2.jpg" alt="Willow Responsive Web Design Images for Tendenci Screenshots Tendenci" />
+<img src="screenshots/tendenci2018showcase.jpg" alt="Tendenci2018 Responsive Web Design Images for Tendenci Screenshots Tendenci" />
 
 ## Getting Started
 
