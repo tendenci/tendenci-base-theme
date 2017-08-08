@@ -10,8 +10,6 @@ body {
 #page-top-home h2,
 #page-top h1, 
 #page-top h2 {
-  font-family: 'Montserrat Alternates', sans-serif;
-  text-transform: lowercase;
   text-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
 p, li {
@@ -111,6 +109,9 @@ a.t-caret.dropdown-toggle:after {
 }
 .nav-icon {
   margin-right: 6px;
+}
+div#box-1 {
+  margin-top: 7px;
 }
 
 /* TENDENCI NAVBAR 
@@ -216,7 +217,7 @@ h4.t-admin-mega-h4 {
 .jumbotron {
   box-shadow: 
     5px 5px 15px rgba(0,0,0,.2),
-    15px 15px rgba(85,147,50,.5);
+    15px 15px #18bc9c;
   border: 1px solid #ddd; 
 }
 
@@ -230,7 +231,7 @@ h4.t-admin-mega-h4 {
 }
 #rotator_inner .carousel-caption {
   text-align: left;
-  background: rgba(85,147,50,.5);
+  background: rgba(24,188,156,.5);
 }
 #rotator_inner .carousel-caption h2>a {
   color: white;
@@ -255,7 +256,7 @@ img.captcha {
 /* THUMBNAIL CARDS
 =========== */
 section#our-resources {
-  background: #2196f3;
+  background: #18bc9c;
   padding: 50px 0 40px;
 }
 #our-resources .thumbnail>img, 
@@ -408,12 +409,11 @@ iframe#speaker-0-description_ifr {
 /* FOOTER
 =========== */
 footer {
-  background: #333;
+  background: #2c3e50;
 }
 footer h3 {
-  color: #2196f3;
+  color: #18bc9c;
   font-size: 20px;
-  text-transform: uppercase;
   margin-top:0;
 }
 footer p,
@@ -470,8 +470,6 @@ INTERNAL PAGES
 /* ABOUT 
 ============= */
 #about-pages h1 {
-  font-family: 'Montserrat Alternates', sans-serif;
-  text-transform: lowercase;
   text-shadow: 1px 1px #585858;
 }
 #about-pages .green-header h1 {
