@@ -10,7 +10,7 @@
         "creator": null,
         "allow_member_view": false,
         "entity": 1,
-        "content": "<p><a href=\"/\"><img class=\"img-responsive\" style=\"margin-right: 30px; margin-left: 20px;\" title=\"willow logo\" src=\"/themes/tendenci-base-theme/media/img/willowlogo.png\" alt=\"willow logo\" width=\"100\" /></a></p>",
+        "content": "<p><a href=\"/\"><img class=\"img-responsive\" style=\"margin-right: 30px; margin-left: 20px;\" title=\"willow logo\" src=\"/themes/tendenci-base-theme/media/img/tendenci-green.png\" alt=\"tendenci green logo\" width=\"100\" /></a></p>",
         "tags": "tendencidemo",
         "title": "Header-Logo",
         "owner_username": "system_generated",
