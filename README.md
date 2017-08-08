@@ -39,14 +39,6 @@ This theme also uses Masonry in the Photos and Videos modules.  It can be easily
 
 <img src="screenshots/tendenci2018-masonry.jpg" width="580" alt="An example of Masonry implemented in the Videos Module Screenshots Tendenci" /> <img src="screenshots/masonry-photos.png" width="250" alt="An example of Masonry implemented in the Photos Module Screenshots Tendenci" />
 
-## Fonts
-The fonts in this theme are:
-* 'Frank Ruhl Libre', serif
-* 'Montserrat Alternates', sans-serif
-* 'Montserrat', sans-serif
-
-They are integrated into base.html using Google Fonts CDN.  If you'd like to host the fonts yourself, you can by downloading them at [Google Fonts](https://fonts.google.com).
-
 ## Icons
 Icon sets in this theme are:
 * [Font Awesome](http://fontawesome.io/)
@@ -66,7 +58,6 @@ Having an issue with this template?  Please submit here on [Tendenci's Base Them
 Copyright Tendenci — The Open Source AMS, 2017 under the GPU license.
 
 Images are from [Pexels](https://pexels.com) under CC0.
-Fonts are from [Google Fonts](https//fonts.google.com).
 
 *For more tips and tricks, visit our Read the Docs!
 https://tendenci.readthedocs.io/en/latest/*
