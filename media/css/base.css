@@ -6,12 +6,6 @@ body {
 #page-top a:hover {
   text-decoration: none;
 }
-#page-top-home h1, 
-#page-top-home h2,
-#page-top h1, 
-#page-top h2 {
-  text-shadow: 0 1px 2px rgba(0,0,0,.6);
-}
 p, li {
   font-size: 16px;
 }
@@ -404,6 +398,9 @@ iframe#speaker-0-description_ifr {
 }
 #event-location-header {
   padding-left:0;
+}
+.events-feature {
+  color: #C29E54;
 }
 
 /* FOOTER
