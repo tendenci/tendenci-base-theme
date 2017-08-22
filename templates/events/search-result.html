@@ -27,10 +27,10 @@
     <!-- DATE AND TIME -->
     <div class="time-period">
       {% if event.all_day %}
-      <span itemprop="startDate" datetime="{{ event.start_dt|date:'c' }}">{{ event.start_dt|date:"D, M j, Y" }}</span> 
-      <!-- END TIME - <span itemprop="endDate" datetime="{{ event.end_dt|date:'c' }}">{{ event.end_dt|date:"l, M j, Y" }}</span> -->
-      {% else %}
-      <span itemprop="startDate" datetime="{{ event.start_dt|date:'c' }}">{{ event.start_dt|date:"D, M j, Y P" }}</span> 
+      <h4><span itemprop="startDate" datetime="{{ event.start_dt|date:'c' }}">{{ event.start_dt|date:"D, M j, Y" }}</span> 
+        <!-- END TIME - <span itemprop="endDate" datetime="{{ event.end_dt|date:'c' }}">{{ event.end_dt|date:"l, M j, Y" }}</span> -->
+        {% else %}
+        <span itemprop="startDate" datetime="{{ event.start_dt|date:'c' }}">{{ event.start_dt|date:"D, M j, Y P" }}</span></h4> 
       <!-- END TIME - <span itemprop="endDate" datetime="{{ event.end_dt|date:'c' }}">{{ event.end_dt|date:"l, M j, Y P" }}</span> -->
       {% endif %}
     </div>
@@ -38,15 +38,21 @@
     
     
     <!-- PANEL TITLE -->
-    <h5>
+    
+    
+    <h1><a href="{% url "event" event.pk %}" itemprop="url"><span itemprop="name">
+      
       {% if event.priority %}
-      <div class="event-priority"></div>
+      <span><i class="fa fa-star events-feature"></i></span>
       {% endif %}
+      
       {% if event.is_recurring_event %}
-      <div class="event-recurring"></div>
+      <span><i class="fa fa-repeat events-feature"></i></span>
       {% endif %}
-      <a href="{% url "event" event.pk %}" itemprop="url"><span itemprop="name">{% blocktrans with title=event.title %}{{ title }}{% endblocktrans %}</span></a>
-    </h5>
+      
+      {% blocktrans with title=event.title %}{{ title }}{% endblocktrans %}
+      </span></a></h1>
+    
     <!-- END PANEL TITLE -->
     
     
@@ -78,17 +84,21 @@
     {% endif %}
     {% endwith %}
     
-    
   </div> <!-- END: PANEL-BODY -->
   
   <div class="panel-footer">
+    
+    {% if event.tags %}
+    {% for tag in event.tags|tag_split %}
+    <a class="label label-default pull-left" href="{% url 'news' %}?q=tag:{{ tag|lower }}">{% blocktrans with tag_instance=tag %}{{ tag_instance }}{% endblocktrans %}</a>
+    {% endfor %}
+    {% endif %}
     
     {% for addon in addons %}
     {{ addon.price }}
     {% endfor %}
     
     {% if event.registration_configuration.enabled %}
-    
     {% if now > event.end_dt or now > event.registration_configuration.end_dt %}
     
     <div class="text-right">
@@ -112,14 +122,16 @@
     </div>
     {% else %}
     
+    {% endif %}
+    
+    {% endif %}
+    
+    {% else %}
+    
     <div class="text-right">
       <a href="{% url "event" event.pk %}"><i class="fa fa-plus" aria-hidden="true"></i></a>
       <div style="clear:both;"></div>
-    </div>
-    
-    {% endif %}
-    
-    {% endif %}
+    </div> 
     
     {% endif %}
   </div>
