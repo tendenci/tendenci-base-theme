@@ -79,7 +79,9 @@ h3.panel-title {
   font-size: 14px;
   color: #F2F2F2;
 }
-
+.form-group {
+  overflow: auto;
+}
 /* NAVBAR
 =========== */
 .navbar-brand {
