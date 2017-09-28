@@ -6,6 +6,11 @@ body {
 #page-top a:hover {
   text-decoration: none;
 }
+#page-top img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 p, li {
   font-size: 16px;
 }
