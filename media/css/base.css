@@ -368,6 +368,7 @@ iframe#speaker-0-description_ifr {
   margin: 10px;
   font-size: 30px;
 }
+
 /* EVENTS LIST VIEW */
 .search-view .event-info .attend-wrap,
 .event-wrap .t-meta-data {
@@ -409,6 +410,12 @@ iframe#speaker-0-description_ifr {
 }
 .events-feature {
   color: #C29E54;
+}
+#event-results .panel-heading img.img-responsive {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 /* FOOTER
