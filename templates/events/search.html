@@ -21,8 +21,17 @@
 
 <div class="t search-view">
   <div class="page-header">
-    <a class="btn btn-default pull-right" href="{% url "event.past_search" %}?{{ request.GET.urlencode }}">{% trans "Past Events" %}</a>
-    <a href="{% url "event.search" %}?{{ request.GET.urlencode }}"><h1>Upcoming {% firstof MODULE_EVENTS_LABEL_PLURAL trans 'Events' %}</h1></a>
+   
+    <a class="btn btn-primary pull-right" href="{% url "event.month" %}?{{ request.GET.urlencode }}">
+      {% trans "Calendar View" %}
+    </a>
+    
+    {% if request.get_full_path == "/events/search/past/" %}
+    <h1>Past {% firstof MODULE_EVENTS_LABEL_PLURAL trans 'Events' %}</h1>
+    {% else %}
+    <h1>Upcoming {% firstof MODULE_EVENTS_LABEL_PLURAL trans 'Events' %}</h1>
+    {% endif %}
+    
   </div>
 
 {% event_search %}
