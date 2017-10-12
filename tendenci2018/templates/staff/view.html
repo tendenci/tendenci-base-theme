@@ -122,7 +122,7 @@ staff {{ staff.name }}
   
   <nav aria-label="back to staff search">  
     <ul class="pager">
-      <li class="previous"><a href="{% url "staff.search" %}"><span aria-hidden="true">&larr;</span> {% trans 'Search other staff' %}</a></li>
+      <li class="previous"><a href="{% url "staff.search" %}"><span aria-hidden="true">&larr;</span> {% trans "Search More " %} {% firstof MODULE_STAFF_LABEL 'Staff' %}</a></li>
     </ul>
   </nav>
   
