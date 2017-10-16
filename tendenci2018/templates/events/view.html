@@ -20,7 +20,29 @@
 <meta name="fb:app_id" content="{{ MODULE_SOCIAL_MEDIA_FB_APP_ID }}" />
 <meta name="og:title" content="{{ MODULE_SOCIAL_MEDIA_OG_TITLE }}" />
 <meta name="og:description" content="{{ MODULE_SOCIAL_MEDIA_OG_DESCRIPTION }}" />
-
+<style>
+div.speaker-desc-long {
+    display: none;
+}
+a.speaker-desc-toggle {
+    margin: 10px 0 0 0;
+    display: block;
+}
+div.organizer-desc-long {
+    display: none;
+}
+a.organizer-desc-toggle {
+    margin: 10px 0 0 0;
+    display: block;
+}
+div.event-place-desc-long {
+    display: none;
+}
+a.event-place-desc-toggle {
+    margin: 10px 0 0 0;
+    display: block;
+}
+</style>
 {{ block.super }}
 {% endblock %}
 
@@ -250,7 +272,7 @@
         
       </div>
       
-      <div class="vitals" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+      <div class="vitals place" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
         <h4 class="time-period">{% trans "Location" %}</h4>
         <p><strong>{{ event.place.name }}</strong></p>
         <p>{{ event.place.address }}<br />
