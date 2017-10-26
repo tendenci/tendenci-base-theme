@@ -551,3 +551,9 @@ div#map {
 .t .membership-detail-wrap fieldset {
   background-color: transparent;
 }
+
+/* for required fields */
+label.required:after {
+    content: '*';
+    color: #ED6270;
+}
