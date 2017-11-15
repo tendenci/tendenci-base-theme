@@ -118,8 +118,17 @@ div#box-1 {
 
 /* TENDENCI NAVBAR 
 =========== */
+#t-admin-megamenu-profile-dd {
+  min-width: 455px;
+}
 #t-admin-megamenu-apps-dd {
   min-width: 524px;
+}
+#t-admin-megamenu-reports-dd {
+  min-width: 400px;
+}
+#t-admin-megamenu-community-dd {
+  min-width: 300px;
 }
 #t-admin-megamenu .navbar-nav>li>a {
   padding-top:3px;
@@ -149,7 +158,6 @@ div#box-1 {
 }
 #t-admin-megamenu .navbar-right .dropdown-menu {
   left: auto;
-  right: auto;
 }
 #t-admin-megamenu .t-caret:after {
   content: "\f107";
