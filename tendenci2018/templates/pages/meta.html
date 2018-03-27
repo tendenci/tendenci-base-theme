@@ -79,27 +79,27 @@
       
       <!-- start: tags -->
       {% if nonhash_tags or hash_tags %}
-      
-      {% if nonhash_tags or can_edit_page %}
-      <li><strong>{% trans "Tag(s):" %}</strong>{% endif %}
+      <li><strong>{% trans "Tag(s):" %}</strong>
+        
+        {% if nonhash_tags or can_edit_page %}
         {% for tag in nonhash_tags %}
         <a class="label label-default" href="{% url 'page.search' %}?q=tag:{{ tag|lower }}">
-          {% blocktrans with tag_instance=tag %}{{ tag_instance }}{% endblocktrans %}
+          {{ tag }}
         </a>
         {% endfor %}
+        {% endif %}
         
         {% if hash_tags and can_edit_page %}
-        {% for tag in nonhash_tags %}
-        
+        {% for tag in hash_tags %}
         <a class="label label-default" href="{% url 'page.search' %}?q=tag:{{ tag|lower }}">
-          {% blocktrans with tag_instance=tag %}{{ tag_instance }}{% endblocktrans %}
+          {{ tag }}
         </a>
+        {% endfor %}
+        {% endif %}
+        
       </li>
+      {% endif %}
       <!-- end: tags -->  
-      {% endfor %}
-      {% endif %}
-      
-      {% endif %}
       
       {% if user.is_authenticated %}
       {% if user.profile.is_superuser or user.id == page.creator_id or user.id == page.owner_id %}
@@ -150,8 +150,9 @@
         
       </li>
     </ul> <!-- end: navbar -->
+    {% endif %}
     
   </div>
 </nav>
 <br />
-{% endif %}
+
