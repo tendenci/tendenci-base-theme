@@ -50,8 +50,8 @@
       <div class="carousel-inner" id="rotator_inner">
         
          <!-- begin: item active -->
-         <div class="item active">
             {% for story in stories_list %}
+            <div class="item {% if forloop.first %} active {% endif %}">
             <img class="img-responsive" src="{{ story.photo.url }}" alt="{{ story.title }}" style="object-position:0 1px;">           
             
            <!-- begin: carousel-caption -->
@@ -68,12 +68,7 @@
             
          </div>
          <!-- end: item active -->
-        
-         <div class="item">
-            <!-- keep empty -->
             {% endfor %}
-         </div>
-        
       </div>
 <!-- end: carousel-inner -->
 <!-- commenting out arrows
@@ -280,21 +275,5 @@
 <!-- Bootstrap core JavaScript
    ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script>
-   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],
-   p=/^http:/.test(d.location)?'http':'https';
-   if(!d.getElementById(id)){
-   js=d.createElement(s);
-   js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
-   fjs.parentNode.insertBefore(js,fjs);}}
-   (document,"script","twitter-wjs");
-</script>
-<script type="text/javascript">
-   $(document).ready(function() {
-   //code below helps remove extra .item that is added. 
-   //#rotator_inner helps target which carousel
-     $('#rotator_inner > .item:last').remove();
-     });
-</script>
 
 {% endblock extra_body %}
