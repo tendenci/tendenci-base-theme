@@ -55,7 +55,7 @@ This template was created by [Tendenci](https://tendenci.com)!
 Having an issue with this template?  Please submit here on [Tendenci's Base Theme Github](https://github.com/tendenci/tendenci-base-theme/issues).
 
 ## Copyright and License
-Copyright Tendenci — The Open Source AMS, 2017 under the GPU license.
+Copyright Tendenci — The Open Source AMS, 2017 under the GNU GPL 3 license.
 
 Images are from [Pexels](https://pexels.com) or by [Ed Schipul](https://www.tendenci.com/photos/set/latest/?q=stock) under CC0.
 
