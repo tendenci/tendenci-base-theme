@@ -62,6 +62,7 @@
       {% endif %}
       
     </form>
+      {% include "events/include/spots_status.html" %}
     
     {% if is_registrant %}
     <div id="is-registrant"><a href="{% url "event.registrant.search" event.pk %}?q={{ user.email }}">
